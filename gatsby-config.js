@@ -5,6 +5,21 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: 'My Blog',
+    author: 'Liau Ming Sheng (Darren)'
+  },
   /* Your site config here */
-  plugins: ['gatsby-plugin-sass'],
+  plugins: [
+    'gatsby-plugin-sass',
+    {
+      resolve:'gatsby-source-filesystem',
+      options:{
+        name: 'src',
+        path: `${__dirname}/src/`,
+        
+      },
+    },'gatsby-transformer-remark',
+  
+  ],
 }
