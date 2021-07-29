@@ -11,6 +11,7 @@ const BlogPage = () =>{
               frontmatter{
                 title
                 date
+                description
               }
               fields{
                 slug
@@ -30,6 +31,7 @@ const BlogPage = () =>{
                         <li>
                             <Link to = {`${edge.node.fields.slug}`}>
                               <h3>{edge.node.frontmatter.title}</h3>
+                              <p>{edge.node.frontmatter.description}</p>
                               <p>posted on {edge.node.frontmatter.date}</p>
                             </Link>
                             
